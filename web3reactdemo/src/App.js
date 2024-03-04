@@ -5,7 +5,7 @@ import detectEthereumProvider from "@metamask/detect-provider";
 
 
 
-var contractAddress = "0xf63B7C5b8AbfeEEa1eb2bd684737a5d08037b2ba";
+var contractAddress = "0x426095667eC89BdeF8368876d9130fCF1876e8F6";
 
 
 export const formatBalance = (rawBalance) => {
@@ -50,7 +50,7 @@ const App = () => {
         const refreshChain = (chainId) => {               /* New */
             setWallet((wallet) => ({ ...wallet, chainId }));   /* New */
         };                                                     /* New */
-
+//หาดูว่ามี Provider หรือไม่ถ้าเจอให้เปิด ปุ่ม Connect
         const getProvider = async () => {
             const provider = await detectEthereumProvider({ silent: true });
             setHasProvider(Boolean(provider));
